@@ -1,0 +1,15 @@
+.user-box{
+    display: flex;
+    flex-wrap:wrap;
+    width: 48vw;
+    height: max-content;
+
+    background-color: rgb(166, 243, 166);
+
+    border-radius: 10px;
+
+    padding: 5px 5px;
+
+    box-shadow: 0 0 10px rgb(48, 188, 48);
+    margin-bottom: 20px;
+}

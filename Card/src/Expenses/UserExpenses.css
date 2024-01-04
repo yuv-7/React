@@ -1,0 +1,10 @@
+.user-expenses{
+    width: max-content;
+    height: max-content;
+    border-radius: 10px;
+    padding: 20px 10px;
+
+}
+.user-expenses h4{
+    font-weight: 400;    
+}

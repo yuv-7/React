@@ -1,0 +1,38 @@
+.bgcolor{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#section {
+    /* position: absolute;
+    left: 0;
+    bottom: 10vh; */
+    width:max-content;
+    height: auto;
+    
+    border-radius: 40px;
+
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: azure;
+    font-size: 5vh;
+
+    margin-bottom: 10vh;
+    box-shadow: 0 0 10px bisque;
+}
+
+#section button {
+    width: 10vw;
+    height: auto;
+
+    border-radius: 40px;
+    margin:5px;
+    background-color: rgb(162, 0, 255);
+    text-shadow: 0 0 8px rgb(234, 199, 247);
+
+}
