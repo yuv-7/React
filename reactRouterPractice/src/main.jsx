@@ -5,7 +5,7 @@ import "./index.css";
 // import Home from "./components/Home/Home";
 // import About from "./components/About/About";
 // import Contact from "./components/Contact/Contact";
-import { Home, About, Contact , User ,Github } from './components/index';
+import { Home, About, Contact , User ,Github ,getEfficientValueFromApi} from './components/index';
 
 // router path syntax1 
 // const router = createBrowserRouter([
@@ -37,7 +37,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />}/>
       <Route path='contact' element={<Contact />}/>
       <Route path='user/:username' element={<User />}/>
-      <Route path='github' element={<Github />}/>
+      <Route path='github' loader={getEfficientValueFromApi} element={<Github />}/>
     </Route>
   )
 )
