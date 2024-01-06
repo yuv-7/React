@@ -1,9 +1,6 @@
-
 import { useState } from "react";
 import useTheme from "../Context/ThemeContext";
 import { useEffect } from "react";
-
-
 
 export default function ThemeBtn() {
    
