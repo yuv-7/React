@@ -10,7 +10,7 @@ const userContext = createContext({
 export const UserContextProvider = userContext.Provider;
 
 const useUserDetails = () =>{
-    return useContext(useContext);
+    return useContext(userContext);
 }
 
 export default useUserDetails;

@@ -1,21 +1,41 @@
-import userContext from "./Context/userContext";
 import { useState } from "react";
-import UserNameSet from "./UserNameSet";
-import UserDisplayName from "./UserDisplayName";
-const App = () =>{
+import { ThemeContextProvider } from "./Context/ThemeContext";
+import { useEffect } from "react";
+import Button from "./Components/Button";
+import Card from "./Components/Card";
 
-  const [userdetails,setUserDetails] = useState("n/a");
+const App = () => {
+
+  const [themeColor,setThemeColor] = useState('light');
+
+  const setLightTheme = () =>{
+    setThemeColor("light");
+  }
+
+  const setDarkTheme = () =>{
+    setThemeColor("dark");
+  }
+
+  useEffect(()=>{
+    document.querySelector('html').classList.remove('light','dark');
+    document.querySelector('body').classList.add(themeColor)
+  },[themeColor])
 
   return (
-    <userContext.Provider value={{userdetails,setUserDetails}} >
+    <ThemeContextProvider value={{themeColor,setLightTheme,setDarkTheme}}>
+      <div className="flex flex-wrap min-h-screen items-center">
+        <div className="w-full">
+          <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
+            <Button />
+          </div>
 
+          <div className="w-full max-w-sm mx-auto">
+            <Card />
+          </div>
+        </div>
+      </div>
+    </ThemeContextProvider>
 
-      <h1 className="w-full bg-cyan-200 text-5xl text-cyan-900 p-4">Use Context with Pashion</h1>
-
-      <UserNameSet />
-      <UserDisplayName />
-
-    </userContext.Provider>
   );
 }
 

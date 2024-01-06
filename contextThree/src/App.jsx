@@ -16,9 +16,8 @@ const App = () => {
     setNewUserAge(newAge);
   }
 
-
   return (
-    <UserContextProvider value={{userName,userAge,setUserName,setUserAge}}>
+    <UserContextProvider value={{userName,setUserName,userAge,setUserAge}}>
       <Login />
       <Profile />
     </UserContextProvider>

@@ -5,17 +5,10 @@ const Login = () => {
   const [newUsername, setNewUserName] = useState("");
   const [newUserage, setNewUserAge] = useState("");
 
-  const { setUserName, setUserAge } = useUserDetails();
+  const { setUserName , setUserAge} = useUserDetails();
 
   const buttonClicked = (e) => {
     e.preventDefault();
-
-    // Simple validation example: ensure newUserage is a number
-    if (isNaN(newUserage)) {
-      // Handle invalid age input
-      alert("Please enter a valid age.");
-      return;
-    }
 
     setUserName(newUsername);
     setUserAge(newUserage);
