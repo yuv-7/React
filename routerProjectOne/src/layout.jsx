@@ -1,4 +1,5 @@
-import { Home, Header, Footer, About, Contact } from "./components/index";
+import {Header} from "./components";
+import {Footer} from "./components";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {

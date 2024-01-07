@@ -17,8 +17,8 @@ const App = () => {
   }
 
   useEffect(()=>{
-    document.querySelector('html').classList.remove('light','dark');
-    document.querySelector('body').classList.add(themeColor)
+    document.querySelector('body').classList.remove('dark');
+    document.querySelector('body').classList.add(themeColor);
   },[themeColor])
 
   return (
@@ -35,7 +35,6 @@ const App = () => {
         </div>
       </div>
     </ThemeContextProvider>
-
   );
 }
 
